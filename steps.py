@@ -1,0 +1,31 @@
+# QUESTION: YOUR FRIEND MISHA WANTS TO CLIMB A STAIRCASE CONSISTING OF N STAIRS.
+# IN ONE STEP SHE CAN EITHER CLIMB ONE OR TWO STAIRS.
+# UT, MISHA WANTS THE TOTAL NUMBER OF STEPS TAKEN AT THE END OF THE STAIRCASE TO BE DIVISIBLE BY A NUMBER M.
+
+
+# WHAT IS THE MINIMUM NUMBER OF STEPS SHE WOULD NEED TO TAKE TO CLIMB TE STAIRCASE WHILE SATISFYING THE ABOVE-MENTIONED CONDITION?
+
+# INPUT
+# THE FIRST LINE OF INPUT CONTAINS AN INTEGER N
+# THE SECOND LINE OF INPUT CONTAINS AN INTEGER M
+
+#OUTPUT
+# PRINT A SINGLE NUMBER - THE MINIMUM NUMBER OF STEPS DIVISIBLE BY M
+# IF THERE IS NO WAY TO CLIMB THE STAIRS WHILE SATISFYING THE REQUIREMENTS, THEN PRINT -1.
+
+
+
+
+def staircase(n,m):
+    if (n>=1 and n<=10000) and (m>=1 and m<=10):
+        val= n/2
+        if (n%m == 0):
+            print(int(val+1))
+        else:
+            print(-1)    
+    else:
+        print(-1)
+
+n = int(input("Enter the total number of steps in the staircase : "))
+m = int(input("Enter the any number to divideecho : "))
+staircase(n,m)            
